@@ -1,19 +1,20 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 // Function to print a subset
-void printSubset(const vector<int>& subset) {
-    cout << "{ ";
-    for (int value : subset)  cout << value << " ";
-    cout << "}" <<endl;
+void printSubset(const vector<int> &subset){
+  cout << "{ ";
+  for (int value : subset)
+    cout << value << " ";
+  cout << "}" << endl;
 }
 
 // Recursive function to generate all subsets
-void generateSubsets(const vector<int>& set, vector<int>& subset, int index) {
-  // Base case: all elements have been considered, print the current subset 
+void generateSubsets(const vector<int> &set, vector<int> &subset, int index){
+  // Base case: all elements have been considered, print the current subset
   if (index == set.size()){
     printSubset(subset);
-    return ;
+    return;
   }
 
   // Exclude the current element and move to the next
@@ -27,11 +28,11 @@ void generateSubsets(const vector<int>& set, vector<int>& subset, int index) {
   subset.pop_back();
 }
 
-int main() {
+int main(){
   vector<int> set = {1, 2, 3};
   vector<int> subset;
 
-  cout << "All subsets are: "<<endl; 
+  cout << "All subsets are: " << endl;
   generateSubsets(set, subset, 0);
 
   return 0;
