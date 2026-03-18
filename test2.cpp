@@ -1,7 +1,3 @@
-/* GFG-----
-leetcode---
-*/
-
 #include <bits/stdc++.h>
 using namespace std;
 mutex mtx; // mutex for critical section
